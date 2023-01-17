@@ -51,6 +51,7 @@ RegisterNetEvent('rsg_bedroll:client:placeDJEquipment', function()
     PlaceObjectOnGroundProperly(object)
     SetEntityHeading(object, heading)
     FreezeEntityPosition(object, true)
+    ClearPedTasks(PlayerPedId())
     deployeddecks = NetworkGetNetworkIdFromEntity(object)
 end)
 
