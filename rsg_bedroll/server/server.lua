@@ -6,7 +6,7 @@ RSGCore.Functions.CreateUseableItem("bedroll", function(source, item)
 	local src = source
 	local Player = RSGCore.Functions.GetPlayer(src)
 	TriggerClientEvent('rsg_bedroll:client:placeDJEquipment', src)
-	Player.Functions.RemoveItem('tent', 1)
+	Player.Functions.RemoveItem('bedroll', 1)
 	TriggerClientEvent('inventory:client:ItemBox', src, RSGCore.Shared.Items['bedroll'], "remove")
 end)
 
