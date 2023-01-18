@@ -3,11 +3,10 @@ local xSound = exports.xsound
 local isPlaying = false
 
 RSGCore.Functions.CreateUseableItem("bedroll", function(source, item)
-	local src = source
-	local Player = RSGCore.Functions.GetPlayer(src)
-	TriggerClientEvent('rsg_bedroll:client:placeDJEquipment', src)
-	Player.Functions.RemoveItem('bedroll', 1)
-	TriggerClientEvent('inventory:client:ItemBox', src, RSGCore.Shared.Items['bedroll'], "remove")
+    local Player = RSGCore.Functions.GetPlayer(source)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("rsg_bedroll:client:placeDJEquipment", source, item.name)
+    end
 end)
 
 
@@ -24,7 +23,7 @@ RegisterNetEvent('rsg_bedroll:Server:RemoveItem', function(item, amount)
 end)
 
 RegisterServerEvent('rsg_bedroll:server:pickeupdecks')
-AddEventHandler('rsg_bedroll:server:pickeupdecks', function()
+AddEventHandler('rsg_cookkit:server:pickeupdecks', function()
 	local src = source
     local Player = RSGCore.Functions.GetPlayer(src)
 	Player.Functions.AddItem('bedroll', 1)
