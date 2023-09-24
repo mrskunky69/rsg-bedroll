@@ -1,6 +1,6 @@
 
 - ensure that the dependancies are added and started
-- add rsg_phonograph to your resources folder
+- add rsg_bedroll to your resources folder
 - add items to your "\qb-core\shared\items.lua"
 - add images to your "\qb-inventory\html\images"
 
