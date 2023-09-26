@@ -4,7 +4,7 @@
 - add items to your "\qb-core\shared\items.lua"
 - add images to your "\qb-inventory\html\images"
 
-['bedroll']					= {['name'] = 'bedroll', 			  	  		['label'] = 'bedroll', 				['weight'] = 50, 		['type'] = 'item', 		['image'] = 'bderoll.png', 				['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,		['combinable'] = nil,   ['description'] = 'sleeptight'},
+['bedroll']					= {['name'] = 'bedroll', 			  	  		['label'] = 'bedroll', 				['weight'] = 50, 		['type'] = 'item', 		['image'] = 'bderoll.png', 				['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,		['combinable'] = nil,   ['description'] = 'sleeptight'},
 
 
 # Starting the resource
